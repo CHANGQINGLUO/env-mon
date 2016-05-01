@@ -1,0 +1,82 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Wechat\"><param name=\"ios-package\" value=\"CDVWechat\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"WECHATAPPID\" value=\"wx7a49466ebb64a57f\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "LSApplicationQueriesSchemes": [
+                        {
+                            "xml": "<array><string>weixin</string><string>wechat</string></array>",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLName</key><string>weixin</string><key>CFBundleURLSchemes</key><array><string>wx7a49466ebb64a57f</string></array></dict></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cn.environmentaltesting"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wx7a49466ebb64a57f",
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "pluginId": "cordova-plugin-inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-wechat/www/wechat.js",
+            "id": "cordova-plugin-wechat.Wechat",
+            "pluginId": "cordova-plugin-wechat",
+            "clobbers": [
+                "Wechat"
+            ]
+        }
+    ]
+}

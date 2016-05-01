@@ -1,0 +1,36 @@
+
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('login')"><</div>
+	<div class="headerCenter">用户注册</div>
+	<div class="headerRight"></div>
+</div>
+<div style="height:100%">
+<div ng-swipe-right="back()" class="login-section" style="height:330px">
+	<!--
+	<div class="login-section-input-image"><img src="./images/icon/user.png"></div>
+	<div class="login-section-input"><input type="text" placeholder=用户名 ng-model="model.id" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<div class="login-section-input-image-empty"></div>
+	<div class="note">数字字母!@_, 不超过30个字符</div>
+	-->
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/phone.png">-->手机号码<font color="red">*</font></div>
+	<div class="login-section-input"><input type="text" placeholder=电话号码将被作为你的登录ID ng-model="model.phone" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<!--<div class="login-section-input-image-empty"></div>-->
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/password.png">-->密码<font color="red">*</font></div>
+	<div class="login-section-input"><input type="password" placeholder=数字字母!@_, 不超过30个字符 ng-model="model.password" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<!--<div class="login-section-input-image-empty"></div>-->
+
+
+	<div class="login-section-input-image">姓名<font color="red">*</font></div>
+	<div class="login-section-input"><input type="text" placeholder=请输入您的姓名 ng-model="model.name" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/email.png">-->电子邮件</div>
+	<div class="login-section-input"><input type="text" placeholder=用于接收重置密码和重要信息 ng-model="model.email" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<!--<div class="login-section-input-image-empty"></div>-->
+
+	<div class="login-section-input-image">客户代码</div>
+	<div class="login-section-input" ><input type="text" placeholder=推荐人8位客户代码(可选) ng-model="model.clientCode" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<div class="login-section-button" ><input hm-tap="registerUser()" id="registerButton" type="button" value="提交" ></div>
+</div>
+</div>

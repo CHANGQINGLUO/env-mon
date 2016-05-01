@@ -1,0 +1,101 @@
+<div class="pageHeader" ng-show="isMainListScreen">
+	<div class="headerLeft" hm-tap="direct('main')"><</div>
+	<div class="headerCenter">环保健康知识</div>
+	<div class="headerRight"></div>
+</div>
+<!--
+<div class="nav-env-health-container" ng-show="isMainListScreen">
+	<div hm-tap="getArticlesbyType('1')" class="nav-env-health-1"></div>
+	<div hm-tap="getArticlesbyType('2')" class="nav-env-health-2"></div>
+	<div hm-tap="getArticlesbyType('3')" class="nav-env-health-3"></div>
+	<div hm-tap="getArticlesbyType('4')" class="nav-env-health-4"></div>
+</div>
+<div class="nav-env-health-text-container" ng-show="isMainListScreen">
+	<div class="nav-env-health-text">环保知识</div>
+	<div class="nav-env-health-text">健康知识</div>
+	<div class="nav-env-health-text">装修知识</div>
+	<div class="nav-env-health-text">环境检测</div>
+</div>
+
+<div class="env-health-3" ng-show="isMainListScreen">
+	<ul>
+	<li ng-repeat="article in recommendedArticleList">
+		<div class="env-health-item" hm-tap="selectMainArticle('{{article.content}}')">
+			<span>{{article.title}}</span>
+			<span style="float:right;color:gray;padding-right:5px">></span>
+		</div>
+	</li>	
+</ul>
+</div>
+<div class="pageHeader" ng-show="!isMainListScreen">
+	<div class="headerLeft" hm-tap="mainBack()"><</div>
+	<div class="headerCenter">环保健康知识</div>
+	<div class="headerRight"></div>
+</div>
+<div id="env-health-main-details" class="env-health-content" ng-show="!isMainListScreen">
+	
+</div>-->
+<div class="noheader-content-container" ng-show="isMainListScreen">
+	<div class="nav-env-health-container">
+		<div hm-tap="getArticlesbyType('1')" class="nav-env-health-1">环保知识</div>
+		<div class="env-health-3" ng-show="isMainListScreen">
+		<ul>
+			<li ng-repeat="article in articleList1"  ng-show="$index<4">
+				<div class="env-health-item" hm-tap="selectMainArticle('{{article.content}}')">
+					<span>{{article.title}}</span>
+					<span style="float:right;color:gray;padding-right:5px"></span>
+				</div>
+			</li>	
+		</ul>
+		</div>
+	</div>
+	<div class="nav-env-health-container">
+		<div hm-tap="getArticlesbyType('2')" class="nav-env-health-2">健康知识</div>
+		<div class="env-health-3" ng-show="isMainListScreen">
+		<ul>
+			<li ng-repeat="article in articleList2">
+				<div class="env-health-item" hm-tap="selectMainArticle('{{article.content}}')">
+					<span>{{article.title}}</span>
+					<span style="float:right;color:gray;padding-right:5px"></span>
+				</div>
+			</li>	
+		</ul>
+		</div>
+	</div>
+	<div class="nav-env-health-container">
+		<div hm-tap="getArticlesbyType('3')" class="nav-env-health-3">装修知识</div>
+		<div class="env-health-3" ng-show="isMainListScreen">
+		<ul>
+			<li ng-repeat="article in articleList3">
+				<div class="env-health-item" hm-tap="selectMainArticle('{{article.content}}')">
+					<span>{{article.title}}</span>
+					<span style="float:right;color:gray;padding-right:5px"></span>
+				</div>
+			</li>	
+		</ul>
+		</div>
+	</div>
+	<div class="nav-env-health-container">
+		<div hm-tap="getArticlesbyType('4')" class="nav-env-health-4">检测知识</div>
+		<div class="env-health-3" ng-show="isMainListScreen">
+		<ul>
+			<li ng-repeat="article in articleList4">
+				<div class="env-health-item" hm-tap="selectMainArticle('{{article.content}}')">
+					<span>{{article.title}}</span>
+					<span style="float:right;color:gray;padding-right:5px"></span>
+				</div>
+			</li>	
+		</ul>
+		</div>
+	</div>
+</div>
+<div class="pageHeader" ng-show="!isMainListScreen">
+	<div class="headerLeft" hm-tap="mainBack()"><</div>
+	<div class="headerCenter">环保健康知识</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container" ng-show="!isMainListScreen">
+<div id="env-health-main-details" class="env-health-content">
+	
+</div>
+</div>

@@ -1,0 +1,93 @@
+
+<div class="pageHeader" ng-show="isListScreen">
+	<div class="headerLeft" hm-tap="direct('my-service-nav')"><</div>
+	<div class="headerCenter">我的收入</div>
+	<div class="headerRight"></div>
+</div>
+<div class="pollution-detect-1" ng-show="isListScreen">
+
+	<ul>
+		<li >
+			<div class="pollution-detect-item">
+				<span>总收入</span>
+			<span style="float:right;color:gray;padding-right:5px">{{income}}元</span>
+			</div>
+		</li>	
+		<li >
+			<div class="pollution-detect-item">
+				<span>已支付</span>
+			<span style="float:right;color:gray;padding-right:5px">{{payment}}元</span>
+			</div>
+		</li>	
+		<li >
+			<div class="pollution-detect-item">
+				<span>未支付</span>
+			<span style="float:right;color:gray;padding-right:5px">{{outstanding}}元</span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+<div class="section" style="padding-left:5%" ng-show="isListScreen">收入详情</div>
+<div class="pollution-detect-1" ng-show="isListScreen">
+
+	<ul>
+		<li ng-repeat="income in incomeList">
+			<div class="pollution-detect-item" hm-tap="selectIncome('{{income.uuid}}')">
+				<span>{{income.createDateStr}}</span>
+			<span style="float:right;color:gray;padding-right:5px">{{income.amount}}元&nbsp;&nbsp;></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+
+
+
+<div class="pageHeader" ng-show="!isListScreen">
+	<div class="headerLeft" hm-tap="back()"><</div>
+	<div class="headerCenter">收入详情</div>
+	<div class="headerRight"></div>
+</div>
+<div class="pollution-detect-1" ng-show="!isListScreen">
+
+	<ul>
+		<li>
+			<div class="my-service-1-item">
+				<span>客户名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{incomeDTO.userDTO.name}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>产品名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{incomeDTO.orderDTO.productName}}</span>
+			</div>
+		</li>	
+		<li>
+			<div class="my-service-1-item">
+				<span>该笔订单价格</span>
+				<span style="float:right;color:gray;padding-right:5px">{{incomeDTO.orderDTO.amount}}元</span>
+			</div>
+		</li>
+	</ul>
+
+</div>
+<div class="pollution-detect-1" ng-show="!isListScreen">
+
+	<ul>
+		<li>
+			<div class="my-service-1-item">
+				<span>提成率</span>
+				<span style="float:right;color:gray;padding-right:5px">{{incomeDTO.rate}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>提成收入</span>
+				<span style="float:right;color:gray;padding-right:5px">{{incomeDTO.amount}}元</span>
+			</div>
+		</li>
+	</ul>
+
+</div>

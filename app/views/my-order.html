@@ -1,0 +1,48 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="direct('my-service-nav')"><</div>
+	<div class="headerCenter">订单列表</div>
+	<div class="headerRight"></div>
+</div>
+<div class="order-status-bar">
+	<div class="status-tab" ng-class="{'status-bar-selected':selectedStatus=='C'}" hm-tap="selectStatus('C')">未支付</div>
+	<div class="status-tab" ng-class="{'status-bar-selected':selectedStatus=='I'}" hm-tap="selectStatus('I')">检测中</div>
+	<div class="status-tab" ng-class="{'status-bar-selected':selectedStatus=='D'}" hm-tap="selectStatus('D')">已完成</div>
+</div>
+<div class="noheader-content-container" style="top:118px">
+<div class="pollution-detect-1" ng-show="selectedStatus=='C'">
+
+	<ul>
+		<li ng-repeat="order in orderList" ng-show="order.status=='C'">
+			<div class="pollution-detect-item" hm-tap="selectOrder('{{order.orderNumber}}')">
+				<span>{{order.productName}}</span>
+			<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+<div class="pollution-detect-1" ng-show="selectedStatus=='I'">
+
+	<ul>
+		<li ng-repeat="order in orderList" ng-show="order.status=='I'">
+			<div class="pollution-detect-item" hm-tap="selectOrder('{{order.orderNumber}}')">
+				<span>{{order.productName}}</span>
+			<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+<div class="pollution-detect-1" ng-show="selectedStatus=='D'">
+
+	<ul>
+		<li ng-repeat="order in orderList" ng-show="order.status=='D'">
+			<div class="pollution-detect-item" hm-tap="selectOrder('{{order.orderNumber}}')">
+				<span>{{order.productName}}</span>
+			<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+</div>

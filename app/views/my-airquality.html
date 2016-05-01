@@ -1,0 +1,68 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="direct('main')"><</div>
+	<div class="headerCenter">空气质量(成都)</div>
+	<div class="headerRight"></div>
+</div>
+
+<div class="noheader-content-container" >
+	<div style="height:80px;padding-left:5%;padding-right:5%;margin-top:5px;margin-bottom:5px;background-color:#d6c60f;color:white">
+		<span style="height:80px;line-height:80px;float:left">空气质量指数(AQI):&nbsp&nbsp{{airQualityData.aqi}}</span>
+		<div style="font-size:2em;height:80px;line-height:80px;width:80px;float:left;margin-left:5%;text-align:center">{{airQualityData.qlty}}</div>
+	</div>
+	<div class="pollution-detect-1">
+	<ul>
+		<li>
+			<div >
+				<span>PM2.5</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.pm25}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+	<ul>
+		<li>
+			<div >
+				<span>PM10</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.pm10}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+	<ul>
+		<li>
+			<div >
+				<span>二氧化硫</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.so2}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+	<ul>
+		<li>
+			<div >
+				<span>二氧化氮</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.no2}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+	<ul>
+		<li>
+			<div >
+				<span>一氧化碳</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.co}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+	<ul>
+		<li>
+			<div >
+				<span>臭氧</span>
+				<span style="float:right;color:gray;padding-right:5px">{{airQualityData.o3}}</span>
+			</div>
+		</li>	
+		
+	</ul>
+</div>
+</div>

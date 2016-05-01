@@ -1,0 +1,52 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="direct('main')"><</div>
+	<div class="headerCenter">检测项目</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container">
+<div class="section">
+	家庭
+</div>
+<div class="product-type-container">
+<div class="product-type" hm-tap="selectProduct('{{product.uuid}}')" ng-repeat="product in fProductList">
+		<div class="product-type-image"><img src="{{imageUrl}}/downloadProductImage?id={{product.uuid}}"></div>
+		<div class="product-type-desc">{{product.name}}</div>
+		<div class="product-type-price">{{product.price}}元</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="section">
+	别墅
+</div>
+<div class="product-type-container">
+<div class="product-type" hm-tap="selectProduct('{{product.uuid}}')" ng-repeat="product in aProductList">
+		<div class="product-type-image"><img src="{{imageUrl}}/downloadProductImage?id={{product.uuid}}"></div>
+		<div class="product-type-desc">{{product.name}}</div>
+		<div class="product-type-price">{{product.price}}元</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="section">
+	办公室
+</div>
+<div class="product-type-container">
+<div class="product-type" hm-tap="selectProduct('{{product.uuid}}')" ng-repeat="product in oProductList">
+		<div class="product-type-image"><img src="{{imageUrl}}/downloadProductImage?id={{product.uuid}}"></div>
+		<div class="product-type-desc">{{product.name}}</div>
+		<div class="product-type-price">{{product.price}}元</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="section">
+	其他
+</div>
+<div class="product-type-container">
+<div class="product-type" hm-tap="selectProduct('{{product.uuid}}')" ng-repeat="product in cProductList">
+		<div class="product-type-image"><img src="{{imageUrl}}/downloadProductImage?id={{product.uuid}}"></div>
+		<div class="product-type-desc">{{product.name}}</div>
+		<div class="product-type-price">{{product.price}}元</div>
+</div>
+<div style="clear:both"></div>
+</div>
+</div>
+</div>

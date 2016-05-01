@@ -1,0 +1,71 @@
+
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('my-order')"><</div>
+	<div class="headerCenter">订单详情</div>
+	<div class="headerRight"></div>
+</div>
+
+
+<div class="order-status-list">
+	<div class="order-status" ng-class="{'order-status-selected':order.status=='C'}">下单</div>
+	<div class="order-status-seperator">></div>
+	<div class="order-status" ng-class="{'order-status-selected':order.status=='P'}">支付定金</div>
+	<div class="order-status-seperator">></div>
+	<div class="order-status" ng-class="{'order-status-selected':order.status=='I'}">检测付款</div>
+	<div class="order-status-seperator">></div>
+	<div class="order-status" ng-class="{'order-status-selected':order.status=='R'}">出具报告</div>
+	<div class="order-status-seperator">></div>
+	<div class="order-status" ng-class="{'order-status-selected':order.status=='D'}">完成</div>
+</div>
+<div ng-swipe-right="back()" class="pollution-detect-1">
+
+	<ul>
+		<li>
+			<div class="my-service-1-item">
+				<span>产品名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.productName}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>数量</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.count}}</span>
+			</div>
+		</li>	
+		<li>
+			<div class="my-service-1-item">
+				<span>价格</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.amount}}元</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>定金</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.preAmount}}元</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>姓名</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.customerName}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>地址</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.mailAddress}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>电话</span>
+				<span style="float:right;color:gray;padding-right:5px">{{order.phone}}</span>
+			</div>
+		</li>	
+	</ul>
+
+</div>
+<div class="logout" hm-tap="directInside('pay')" ng-show="order.status=='C'">
+		<span>支付定金</span>
+	</div>
+</div>

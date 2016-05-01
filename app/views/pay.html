@@ -1,0 +1,27 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('product-list')"><</div>
+	<div class="headerCenter">支付订单</div>
+	<div class="headerRight" hm-tap="addOrder()"></div>
+</div>
+<div class="noheader-content-container">
+<div class="my-service-1">
+
+	<ul>
+		<li>
+			<div class="section">
+				<span>选择支付方式</span>
+				<span style="float:right;color:gray;padding-right:5px"></span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item" hm-tap="selectPayType('wechat')">
+				<span><img style="height:30px" src="./images/WePayLogo.png"></span>
+				<span style="float:right;color:gray;padding-right:5px"><img id='wechat-image' style="height:30px" src="./images/icon/radio-button_off.png"></span>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="logout" style="bottom:0px" hm-tap="payOrder()">
+		<span>确认支付</span>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="cn.environmentaltesting" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>中环博</name>
+    <description>
+        中环博APP
+    </description>
+    <author email="luochangqing@outlook.com" href="http://environmental-testing.cn">
+        LUO CHANGQING
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="about:blank" />
+</widget>

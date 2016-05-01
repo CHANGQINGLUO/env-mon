@@ -1,0 +1,81 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="direct('main')"><</div>
+	<div class="headerCenter">用户中心</div>
+	<div class="headerRight"></div>
+</div>
+<div class="my-service-1">
+	<ul>
+		<li>
+			<div hm-tap="directInside('my-info')" class="my-service-1-item">
+				<!--<img src="./images/icon/hire_me.png" style="width:32px"></img>-->
+				<span>我的资料</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>	
+		<li ng-show="isProxy">
+			<div hm-tap="directInside('my-customer')" class="my-service-1-item">
+				<!--<img src="./images/icon/users.png"></img>-->
+				<span>我的客户</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isProxy">
+			<div hm-tap="directInside('my-income')" class="my-service-1-item">
+				<!--<img src="./images/icon/credit.png"></img>-->
+				<span>我的收入</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isIndividual">
+			<div class="my-service-1-item" hm-tap="directInside('my-order')">
+				<!--<img src="./images/icon/order.png" style="width:32px"></img>-->
+				<span>我的订单</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<!--	
+		<li ng-show="isIndividual">
+			<div class="my-service-1-item" hm-tap="directInside('my-report-list')">
+				<img src="./images/icon/attibutes.png" style="width:32px"></img>
+				<span>我的报告</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		-->
+		<li ng-show="isInternal">
+			<div hm-tap="directInside('register-proxy')" class="my-service-1-item">
+				<!--<img src="./images/icon/advertising.png"></img>-->
+				<span>注册代理商</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isInternal">
+			<div hm-tap="directInside('my-proxy')" class="my-service-1-item">
+				<!--<img src="./images/icon/advertising.png"></img>-->
+				<span>我的代理商</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isAdmin">
+			<div hm-tap="directInside('my-employee')" class="my-service-1-item">
+				<!--<img src="./images/icon/advertising.png"></img>-->
+				<span>我的销售人员</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li>
+			<div hm-tap="directInside('my-barcode')" class="my-service-1-item">
+				<!--<img src="./images/icon/erweima.png"></img>-->
+				<span>扫描二维码</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		
+	</ul>
+	
+
+	
+</div>
+<div class="logout" id="logoutButton" hm-tap="logout()">
+		<span>退出登录</span>
+	</div>

@@ -1,0 +1,29 @@
+<div class="pageHeader" ng-show="isListScreen">
+	<div class="headerLeft" hm-tap="directInside('env-health-nav')"><</div>
+	<div class="headerCenter">环保健康知识</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container"  ng-show="isListScreen">
+	<div class="env-health-3" style="width:100%">
+		<ul>
+		<li ng-repeat="article in articleList">
+			<div class="env-health-item" hm-tap="selectArticle('{{article.content}}')">
+				<span>{{article.title}}</span>
+				<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+	</ul>
+	</div>
+</div>
+
+
+<div class="pageHeader" ng-show="!isListScreen">
+	<div class="headerLeft" hm-tap="back()"><</div>
+	<div class="headerCenter">环保健康知识</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container"  ng-show="!isListScreen">
+	<div id="env-health-details" class="env-health-content">
+		
+	</div>
+</div>

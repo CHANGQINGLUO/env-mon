@@ -1,0 +1,57 @@
+<div class="pageHeader" ng-show="isListScreen">
+	<div class="headerLeft" hm-tap="direct('my-service-nav')"><</div>
+	<div class="headerCenter">我的销售({{employeeSize}})</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container" ng-show="isListScreen">
+<div ng-swipe-right="directInside('my-service-nav')" class="pollution-detect-1">
+	<ul>
+		<li ng-repeat="customer in employeeList">
+			<div class="pollution-detect-item" hm-tap="selectEmployee('{{customer.loginId}}','{{customer.name}}','{{customer.email}}','{{customer.hp}}','{{customer.address}}','{{customer.company}}','{{customer.creationDate}}')">
+				<span>{{customer.name}}</span>
+				<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+</div>
+<div class="pageHeader" ng-show="!isListScreen">
+	<div class="headerLeft" hm-tap="back()"><</div>
+	<div class="headerCenter">销售人员详情</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container" ng-show="!isListScreen">
+<div  class="pollution-detect-1">
+	<ul>
+		<li>
+			<div class="pollution-detect-item">
+				<!--<img src="./images/icon/archives.png"></img>-->
+				<span>姓名</span>
+				<span style="float:right;color:gray;padding-right:5px">{{employee.name}}</span>
+			</div>
+		</li>	
+		<li>
+			<div class="pollution-detect-item">
+				<!--<img src="./images/icon/phone.png"></img>-->
+				<span>电话</span>
+				<span style="float:right;color:gray;padding-right:5px">{{employee.phone}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				<!--<img src="./images/icon/email.png"></img>-->
+				<span>邮箱</span>
+				<span style="float:right;color:gray;padding-right:5px">{{employee.email}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item" hm-tap="directInside('my-proxy')">
+				<!--<img src="./images/icon/calendar.png"></img>-->
+				<span>代理商列表</span>
+				<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>
+	</ul>
+</div>
+</div>
