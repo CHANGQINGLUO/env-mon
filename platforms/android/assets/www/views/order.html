@@ -1,0 +1,53 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('product-details')"><</div>
+	<div class="headerCenter">填写客户信息</div>
+	<div class="headerRight" hm-tap="addOrder()">确认</div>
+</div>
+<div class="noheader-content-container">
+<div class="my-service-1">
+
+	<ul>
+		<li>
+			<div class="my-service-1-item">
+				<span>产品名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{orderDetails.productName}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>取样点位数</span>
+				<span style="float:right;color:gray;padding-right:5px">{{orderDetails.points}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>总价格</span>
+				<span style="float:right;color:gray;padding-right:5px">{{orderDetails.amount}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>预付定金</span>
+				<span style="float:right;color:gray;padding-right:5px">{{orderDetails.preAmount}}</span>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="section">请填写客户信息</div>
+
+	<div class="customer-info">
+		<span>姓名</span>
+		<div class="customer-info-input"><input type="text" ng-model="orderDetails.customerName"/></div>
+	</div>
+	<div style="clear:both"></div>
+		<div class="customer-info">
+		<span>电话</span>
+		<div  class="customer-info-input"><input type="text" ng-model="orderDetails.phone"/></div>
+	</div>
+	<div style="clear:both"></div>
+	<div class="customer-info">
+		<span>地址</span>
+		<div class="customer-info-input"><input type="text" ng-model="orderDetails.mailAddress"/></div>
+	</div>
+	<div style="clear:both"></div>
+</div>

@@ -1,0 +1,67 @@
+<div class="pageHeader" ng-show="isListScreen">
+	<div class="headerLeft" hm-tap="directInside('login')" ng-show="!isUserLogin">登录</div>
+	<div class="headerLeft" ng-show="isUserLogin"></div>
+	<div class="headerCenter">中环博检测</div>
+	<div class="headerRight"></div>
+</div>
+
+<div class="noheader-content-container">
+<div class="network-no-connection" ng-show="!isOnline">
+	无网络连接,请检查网络设置
+</div>
+
+<div class="nav-image-container" ng-show="isListScreen">
+	<ul>
+		<li >
+			<div class="decoration" ng-swipe-left="swipeImage('left')" ng-swipe-right="swipeImage('right')">
+				<img id="mainImage" src="{{imageUrl}}/downloadMainImage?id=1"></img>
+			</div>
+
+		</li>
+	</ul>
+
+</div>
+<div class="nav-nav-container" ng-show="isListScreen" ng-class="{'nav-nav-container-offline':!isOnline}">
+	<ul>
+		<li ng-class="{'on':currentPage==1,'off':currentPage!=1}"></li>
+		<li ng-class="{'on':currentPage==2,'off':currentPage!=2}"></li>
+		<li ng-class="{'on':currentPage==3,'off':currentPage!=3}"></li>
+	</ul>
+
+</div>
+<div class="nav-main-container" ng-show="isListScreen">
+	<div hm-tap="direct('product-list')" class="nav-main-3">在线下单</div>
+	<div hm-tap="directInside('my-report-list')" class="nav-main-4">检查报告</div>
+	<div hm-tap="directInside('env-health-nav')" class="nav-main-1">环保健康</div>
+	<div class="nav-main-2"  hm-tap="directInside('my-airquality')">空气质量</div>
+	<!--<div class="nav-main-2">我的报告</div>-->
+	
+	
+</div>
+
+
+
+<!--
+<div class="message-1" ng-show="isListScreen">
+	<span>公司新闻</span>
+</div>
+-->
+<div class="article-title" ng-show="isListScreen"><span>公司新闻</span></div>
+<div class="nav-article-container" ng-show="isListScreen">
+	<ul>
+		<li ng-repeat="newsItem in newsList"><div hm-tap="selectMainItem('{{newsItem.content}}')" class="message-2-item">
+		<span>{{newsItem.title}}</span><span style="float:right;padding-right:5px">></span></div>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="pageHeader" ng-show="!isListScreen">
+	<div class="headerLeft" hm-tap="back()" ><</div>
+	<div class="headerCenter">详情</div>
+	<div class="headerRight"></div>
+</div>
+<div class="noheader-content-container" ng-show="!isListScreen">
+	<div id="home-details" class="home-content">
+		
+	</div>
+</div>

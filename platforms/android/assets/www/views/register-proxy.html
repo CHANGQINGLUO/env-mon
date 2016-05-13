@@ -1,0 +1,23 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('my-service-nav')"><</div>
+	<div class="headerCenter">注册代理商</div>
+	<div class="headerRight"></div>
+</div>
+<div style="height:100%">
+<div ng-swipe-right="back()" class="login-section" style="height:190px">
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/archives.png">-->姓名<font color="red">*</font></div>
+	<div class="login-section-input"><input type="text" placeholder=姓名 ng-model="model.name" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/phone.png">-->手机号码<font color="red">*</font></div>
+	<div class="login-section-input"><input type="text" placeholder=电话号码将被作为代理商的登录ID ng-model="model.phone" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+	<!--<div class="login-section-input-image-empty"></div>-->
+	
+
+	<div class="login-section-input-image"><!--<img src="./images/icon/bank.png">-->公司名称<font color="red">*</font></div>
+	<div class="login-section-input" ><input type="text" placeholder=请输入代理商公司名称 ng-model="model.company" ng-class="{'invalid-userid-password':invalidInput}" ng-change="enableInput()"></div>
+
+	<div class="login-section-button" ><input hm-tap="registerUser()" id="registerButton" type="button" value="提交" ></div>
+</div>
+</div>

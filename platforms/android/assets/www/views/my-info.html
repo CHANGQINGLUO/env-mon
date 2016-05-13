@@ -1,0 +1,89 @@
+
+<div class="pageHeader" ng-show="isShowSummary">
+	<div class="headerLeft" hm-tap="direct('my-service-nav')"><</div>
+	<div class="headerCenter">我的资料</div>
+	<div class="headerRight"></div>
+</div>
+<div class="pageHeader" ng-show="!isShowSummary">
+	<div class="headerLeft" hm-tap="back()"><</div>
+	<div class="headerCenter">修改资料</div>
+	<div class="headerRight"></div>
+</div>
+<div ng-swipe-right="directInside('my-service-nav')" class="my-service-1" ng-show="isShowSummary">
+
+	<ul>
+		<li>
+			<div hm-tap="changeName()" class="my-service-1-item">
+				
+				<span>姓名</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.name}}&nbsp&nbsp></span>
+			</div>
+		</li>	
+		<li>
+			<div hm-tap="changePhone()" class="my-service-1-item">
+				
+				<span>电话</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.phone}}&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li>
+			<div hm-tap="changeEmail()" class="my-service-1-item">
+				
+				<span>邮箱</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.email}}&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="!isIndividual">
+			<div hm-tap="changeAddress()" class="my-service-1-item">
+				
+				<span>地址</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.address}}&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="!isIndividual">
+			<div hm-tap="changeCompany()" class="my-service-1-item">
+				
+				<span>公司名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.company}}&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="!isIndividual">
+			<div class="my-service-1-item">
+				
+				<span>8位客户代码</span>
+				<span style="float:right;color:gray;padding-right:5px">{{userProfile.clientCode}}&nbsp&nbsp&nbsp</span>
+			</div>
+		</li>
+		<li>
+			<div hm-tap="directInside('changePassword')" class="my-service-1-item">
+				
+				<span>修改密码</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<div class="login-section" ng-swipe-right="back()">
+
+<div class="login-section-input" style="width:100%" ng-model="model.name" ng-show="isShowName">
+	<input type="text" placeholder=名字 ng-model="model.name" />
+</div>
+<div class="login-section-input" ng-model="model.email" ng-show="isShowEmail">
+	<input type="text" placeholder=邮箱 ng-model="model.email" />
+</div>
+<div class="login-section-input" ng-model="model.phone" ng-show="isShowPhone">
+	<input type="text" placeholder=电话 ng-model="model.phone" />
+</div>
+<div class="login-section-input" ng-model="model.address" ng-show="isShowAddress">
+	<input type="text" placeholder=地址 ng-model="model.address" />
+</div>
+<div class="login-section-input" ng-model="model.company" ng-show="isShowCompany">
+	<input type="text" placeholder=公司名称 ng-model="model.company" />
+</div>
+
+<div class="login-section-button" hm-tap="save()" ng-show="!isShowSummary">
+	<input id="saveButton" type="button" value="保存">
+</div>
+</div>

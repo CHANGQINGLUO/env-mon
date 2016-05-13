@@ -23,7 +23,8 @@ module.exports = function (grunt) {
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist',
-    ioswww: 'platforms/ios/www'
+    ioswww: 'platforms/ios/www',
+    androidwww: 'platforms/android/assets/www'
   };
 
   // Define the configuration for all the tasks
@@ -178,6 +179,20 @@ module.exports = function (grunt) {
             '!<%= yeoman.ioswww %>/cordova.js',
             '!<%= yeoman.ioswww %>/plugins/**',
             '!<%= yeoman.ioswww %>/cordova-js-src/**'
+          ]
+        }]
+      },
+      androidwww: {
+        files: [{
+          dot: true,
+          src: [
+            '<%= yeoman.androidwww %>/{,*/}*',
+            '!<%= yeoman.androidwww %>/.git{,*/}*',
+            '!<%= yeoman.androidwww %>/cordova_plugins.js',
+            '!<%= yeoman.androidwww %>/cordova.js',
+            '!<%= yeoman.androidwww %>/plugins/**',
+            '!<%= yeoman.androidwww %>/index.html',
+            '!<%= yeoman.androidwww %>/cordova-js-src/**'
           ]
         }]
       },
@@ -419,6 +434,26 @@ module.exports = function (grunt) {
           ]
         }]
       },
+      androidwww: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.androidwww %>',
+          src: [
+            '**/*.*','!index.html'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: 'bower_components',
+          dest: '<%= yeoman.androidwww %>/bower_components',
+          src: [
+            '**/*.*'
+          ]
+        }]
+      },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
@@ -481,7 +516,7 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('buildios', [
     'clean:dist',
     'clean:ioswww',
     'wiredep',
@@ -499,6 +534,10 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin',
     'copy:ioswww'
+  ]);
+  grunt.registerTask('buildandroid', [
+    'clean:androidwww',
+    'copy:androidwww'
   ]);
 
   grunt.registerTask('default', [

@@ -1,0 +1,27 @@
+<div class="pageHeader">
+	<div class="headerLeft"></div>
+	<div class="headerCenter">用户登录</div>
+	<div class="headerRight"></div>
+</div>
+<div class="login-section" style="height:120px">
+
+	<div class="login-section-input-image">
+		<!--<img src="./images/icon/user.png">-->
+		用户名
+	</div>
+	<div class="login-section-input"><input type="text" placeholder=请输入您的用户名(手机号码) ng-model="model.id" ng-class="{'invalid-userid-password':invalidUserPassword}" ng-change="enableUserPassword()"></div>
+
+	<div class="login-section-input-image">
+		<!--<img src="./images/icon/password.png">-->
+		密码
+	</div>
+	<div class="login-section-input"><input type="password" placeholder=请输入您的密码 ng-model="model.password" ng-class="{'invalid-userid-password':invalidUserPassword}" ng-change="enableUserPassword()"></div>
+
+	<div class="login-section-button" ><input hm-tap="submit()" id="loginButton" type="button" value="登录" ></div>
+	<div class="login-section-button">
+		<a hm-tap="goRegister()"><span style="float:left;color:black">注&nbsp;&nbsp;册</span></a>
+		<a hm-tap="goReset()"><span style="float:right;color:black">忘记密码</span></a>
+	</div>
+</div>
+
+

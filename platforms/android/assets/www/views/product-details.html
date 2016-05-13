@@ -1,0 +1,65 @@
+<div class="pageHeader">
+	<div class="headerLeft" hm-tap="directInside('product-list')"><</div>
+	<div class="headerCenter">产品详情</div>
+	<div class="headerRight" hm-tap="directInside('order')">立即预约</div>
+</div>
+<div class="noheader-content-container">
+<div class="my-service-1">
+
+	<ul>
+		<li>
+			<div class="my-service-1-item">
+				<span>产品名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{product.name}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>取样点位数</span>
+				<span style="float:right;color:gray;padding-right:5px">{{product.points}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>产品价格</span>
+				<span style="float:right;color:gray;padding-right:5px">{{product.price}}元</span>
+			</div>
+		</li>
+		<li>
+			<div class="my-service-1-item">
+				<span>预付定金</span>
+				<span style="float:right;color:gray;padding-right:5px">{{product.prePrice}}元</span>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="my-service-1">
+
+	<ul>
+		<li>
+<div class="section">
+				<span>包含检测项</span>
+				<span style="float:right;color:gray;padding-right:5px"></span>
+			</div>
+			<div class="my-service-1-item" hm-tap="directInside('indoor-3')">
+				<span>甲醛检测</span>
+				<span style="float:right;color:gray;padding-right:5px">详情&nbsp;&nbsp;></span>
+			</div>
+			<div class="my-service-1-item" hm-tap="directInside('indoor-5')">
+				<span>苯检测</span>
+				<span style="float:right;color:gray;padding-right:5px">详情&nbsp;&nbsp;></span>
+			</div>
+			<div class="my-service-1-item" hm-tap="directInside('indoor-6')">
+				<span>氡浓度检测</span>
+				<span style="float:right;color:gray;padding-right:5px">详情&nbsp;&nbsp;></span>
+			</div>
+			<div class="my-service-1-item" hm-tap="directInside('indoor-4')">
+				<span>TVOC浓度检测</span>
+				<span style="float:right;color:gray;padding-right:5px">详情&nbsp;&nbsp;></span>
+			</div>
+			</li>	
+	</ul>
+</div>
+
+<div class="my-service-1" ng-bind-html="product.trustedDescription"></div>
+</div>

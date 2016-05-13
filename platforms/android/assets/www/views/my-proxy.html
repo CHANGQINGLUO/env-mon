@@ -1,0 +1,67 @@
+<div class="pageHeader" ng-show="isListScreen">
+	<div class="headerLeft" hm-tap="direct('my-service-nav')"><</div>
+	<div class="headerCenter">我的代理商({{proxySize}})</div>
+	<div class="headerRight"></div>
+</div>
+<div ng-swipe-right="directInside('my-service-nav')" class="pollution-detect-1" ng-show="isListScreen">
+	<ul>
+		<li ng-repeat="customer in proxyList">
+			<div class="pollution-detect-item" hm-tap="selectProxy('{{customer.loginId}}','{{customer.name}}','{{customer.email}}','{{customer.hp}}','{{customer.address}}','{{customer.company}}','{{customer.creationDate}}')">
+				<span>{{customer.name}}</span>
+				<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+<div class="pageHeader" ng-show="!isListScreen">
+	<div class="headerLeft" hm-tap="back()"><</div>
+	<div class="headerCenter">代理商详情</div>
+	<div class="headerRight"></div>
+</div>
+<div ng-swipe-right="back()" class="pollution-detect-1" ng-show="!isListScreen">
+	<ul>
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>姓名</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.name}}</span>
+			</div>
+		</li>	
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>电话</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.phone}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>邮箱</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.email}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>地址</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.address}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>公司名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.company}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				
+				<span>代理商注册日期</span>
+				<span style="float:right;color:gray;padding-right:5px">{{proxy.creationDate}}</span>
+			</div>
+		</li>
+	</ul>
+</div>

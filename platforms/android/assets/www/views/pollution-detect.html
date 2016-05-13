@@ -1,0 +1,56 @@
+<div class="section">
+<img style="float:left" src="./images/icon/back.png" hm-tap="directInside('pollution-detect-nav')">
+检测项目
+</div>
+<div class="pollution-detect-1" ng-show="isListScreen">
+	<ul>
+		<li ng-repeat="customer in customerList">
+			<div class="pollution-detect-item" hm-tap="selectCustomer('{{customer.name}}','{{customer.email}}','{{customer.hp}}','{{customer.address}}','{{customer.company}}','{{customer.creationDate}}')">
+				<span><img src="./images/customer.png">&nbsp&nbsp&nbsp{{customer.name}}</span>
+				<span style="float:right;color:gray;padding-right:5px">></span>
+			</div>
+		</li>	
+
+	</ul>
+</div>
+
+<div ng-swipe-right="back()" class="pollution-detect-1" ng-show="!isListScreen">
+	<ul>
+		<li>
+			<div class="pollution-detect-item">
+				<span>姓名</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.name}}</span>
+			</div>
+		</li>	
+		<li>
+			<div class="pollution-detect-item">
+				<span>电话</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.phone}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				<span>邮箱</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.email}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				<span>地址</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.address}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				<span>公司名称</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.company}}</span>
+			</div>
+		</li>
+		<li>
+			<div class="pollution-detect-item">
+				<span>客户创建日期</span>
+				<span style="float:right;color:gray;padding-right:5px">{{customer.creationDate}}</span>
+			</div>
+		</li>
+	</ul>
+</div>

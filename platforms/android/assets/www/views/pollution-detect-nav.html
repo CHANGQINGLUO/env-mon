@@ -1,0 +1,62 @@
+
+<div class="section">
+<img style="float:left" src="./images/icon/back.png" hm-tap="direct('main')">
+检测项目
+</div>
+<div style="height:100%">
+<div class="pollution-detect-type-container">
+	<div class="pollution-detect-type" ng-class="{'pollution-detect-type-selected':isTypeSelected('building')}" hm-tap="selectDetectType('building')">
+		建筑工程环境
+	</div>
+	<div class="pollution-detect-type" ng-class="{'pollution-detect-type-selected':isTypeSelected('indoor')}" hm-tap="selectDetectType('indoor')">
+		室内空气
+	</div>
+	<div class="pollution-detect-type" ng-class="{'pollution-detect-type-selected':isTypeSelected('tvoc')}" hm-tap="selectDetectType('tvoc')">
+		TVOC专项
+	</div>
+	<div class="pollution-detect-type" ng-class="{'pollution-detect-type-selected':isTypeSelected('airs')}" hm-tap="selectDetectType('airs')">
+		空气和废气
+	</div>
+</div>
+
+<div class="nav-pollution-detect-container" ng-show="isTypeSelected('building')">
+	<div hm-tap="directInside('building-1')" class="pollution-detect-type-building-1"></div>
+	<div hm-tap="directInside('building-2')" class="pollution-detect-type-building-2"></div>
+</div>
+<div class="pollution-detect-type-text-container" ng-show="isTypeSelected('building')">
+	<div class="pollution-detect-type-text">民用建筑土壤氡检测</div>
+	<div class="pollution-detect-type-text">竣工验收空气质量检测</div>
+</div>
+<div class="nav-pollution-detect-container" ng-show="isTypeSelected('indoor')">
+	<div hm-tap="directInside('indoor-1')" class="pollution-detect-type-indoor-1"></div>
+	<div hm-tap="directInside('indoor-2')" class="pollution-detect-type-indoor-2"></div>
+</div>
+<div class="pollution-detect-type-text-container" ng-show="isTypeSelected('indoor')">
+	<div class="pollution-detect-type-text">装修污染空气检测</div>
+	<div class="pollution-detect-type-text">办公室甲醛检测</div>
+</div>
+<div class="nav-pollution-detect-container" ng-show="isTypeSelected('indoor')">
+	<div hm-tap="directInside('indoor-3')" class="pollution-detect-type-indoor-3"></div>
+	<div hm-tap="directInside('indoor-4')" class="pollution-detect-type-indoor-4"></div>
+</div>
+<div class="pollution-detect-type-text-container" ng-show="isTypeSelected('indoor')">
+	<div class="pollution-detect-type-text">家庭甲醛检测</div>
+	<div class="pollution-detect-type-text">室内TVOC浓度检测</div>
+</div>
+<div class="nav-pollution-detect-container" ng-show="isTypeSelected('indoor')">
+	<div hm-tap="directInside('indoor-5')" class="pollution-detect-type-indoor-5"></div>
+	<div hm-tap="directInside('indoor-6')" class="pollution-detect-type-indoor-6"></div>
+</div>
+<div class="pollution-detect-type-text-container" ng-show="isTypeSelected('indoor')">
+	<div class="pollution-detect-type-text">室内苯检测</div>
+	<div class="pollution-detect-type-text">室内氡浓度检测</div>
+</div>
+<div class="nav-pollution-detect-container" ng-show="isTypeSelected('indoor')">
+	<div hm-tap="directInside('indoor-7')" class="pollution-detect-type-indoor-7"></div>
+</div>
+<div class="pollution-detect-type-text-container" ng-show="isTypeSelected('indoor')">
+	<div class="pollution-detect-type-text">室内氨气浓度检测</div>
+</div>
+<div style="font-size:0.7em;padding-left:5%;padding-right:5%;padding-top:20px" ng-include="sourceHtml" ng-show="isTypeSelected('airs')||isTypeSelected('tvoc')">
+</div>
+</div>
