@@ -19,7 +19,35 @@
 				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
 			</div>
 		</li>
+		<li ng-show="isIndividual">
+			<div hm-tap="directInside('my-customer')" class="my-service-1-item">
+				<!--<img src="./images/icon/users.png"></img>-->
+				<span>我的客户</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isInternal">
+			<div hm-tap="directInside('my-customer')" class="my-service-1-item">
+				<!--<img src="./images/icon/users.png"></img>-->
+				<span>我的客户</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
 		<li ng-show="isProxy">
+			<div hm-tap="directInside('my-income')" class="my-service-1-item">
+				<!--<img src="./images/icon/credit.png"></img>-->
+				<span>我的收入</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isIndividual">
+			<div hm-tap="directInside('my-income')" class="my-service-1-item">
+				<!--<img src="./images/icon/credit.png"></img>-->
+				<span>我的收入</span>
+				<span style="float:right;color:gray;padding-right:5px">&nbsp&nbsp></span>
+			</div>
+		</li>
+		<li ng-show="isInternal">
 			<div hm-tap="directInside('my-income')" class="my-service-1-item">
 				<!--<img src="./images/icon/credit.png"></img>-->
 				<span>我的收入</span>

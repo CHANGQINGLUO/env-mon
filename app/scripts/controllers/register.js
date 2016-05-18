@@ -81,6 +81,9 @@ angular.module('angularAppApp')
                             $scope.invalidInput = false;
                             $rootScope.popup('注册用户成功');
                             $location.path('/login');
+                        }else if(data.code=='2'){
+                            $rootScope.popup('注册失败, 该手机号已使用');
+                            $scope.invalidInput = true;
                         }else{
                             console.log('login fail: '+data.message);
                             $rootScope.popup('注册用户失败, 请稍候重试');
@@ -118,6 +121,9 @@ angular.module('angularAppApp')
                             $scope.invalidInput = false;
                             $rootScope.popup('注册用户成功');
                             $location.path('/login');
+                        }else if(data.code=='2'){
+                            $rootScope.popup('注册失败, 该手机号已使用');
+                            $scope.invalidInput = true;
                         }else{
                             console.log('login fail: '+data.message);
                             $rootScope.popup('注册用户失败, 请稍候重试');
