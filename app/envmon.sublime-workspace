@@ -275,121 +275,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "scripts/controllers/pay.js",
-			"settings":
-			{
-				"buffer_size": 4369,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 4883,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/app.js",
-			"settings":
-			{
-				"buffer_size": 10725,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "styles/main.css",
-			"settings":
-			{
-				"buffer_size": 20440,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/env-health-nav.html",
-			"settings":
-			{
-				"buffer_size": 3728,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/my-barcode.html",
-			"settings":
-			{
-				"buffer_size": 523,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/my-customer.html",
-			"settings":
-			{
-				"buffer_size": 2249,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/my-service-nav.html",
-			"settings":
-			{
-				"buffer_size": 3868,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "'use strict';\n\n/**\n * @ngdoc function\n * @name angularAppApp.controller:PollutionDetectCtrl\n * @description\n * # PollutionDetectCtrl\n * Controller of the angularAppApp\n */\nangular.module('angularAppApp')\n  .controller('MyCustomerCtrl', function ($scope,$rootScope,$location,$http) {\n\n\n  	$scope.customerList=[];\n    $scope.customer={};\n\n\n    $scope.isListScreen = true;   \n    if($rootScope.mockMode){\n    	$scope.customerList = [{\"name\":\"乔健辉\",\"hp\":\"18766669999\",\"email\":\"jianhui@qq.com\",\"creationDate\":\"2016-02-23\",\"address\":\"蓝谷地\"},{\"name\":\"罗长青\",\"hp\":\"18428396758\",\"email\":\"changqing@qq.com\",\"creationDate\":\"2016-02-23\",\"address\":\"绿地468公馆\"}];\n    }else\n        $http({     \n            url:$rootScope.hostUrl+'getCustomerListByAdvisor',\n            method:'POST',\n            data:{\n                'loginId':$rootScope.userProfile.id\n            },\n            headers:{\n                'Content-Type': 'application/json'\n            }\n            }).success(function(data,header,config,status){\n                console.log('get customer list success');\n                $scope.customerList = data.body;\n            }).error(function(data,header,config,status){\n                console.log('get customer list fail');\n                \n        });\n\n        $scope.selectCustomer = function(loginId,name, email, phone, address, company, creationDate){\n            $scope.customer = {\"name\":name, \"email\":email, \"phone\":phone, \"address\":address, \"company\":company, \"creationDate\":creationDate};\n            $scope.isListScreen = false;\n            $rootScope.orderLoginId=loginId;\n        };\n        $scope.back = function(){\n            $scope.isListScreen = true;\n        };\n  });\n",
-			"file": "scripts/controllers/my-customer.js",
-			"file_size": 1701,
-			"file_write_time": 1462093965000000,
-			"settings":
-			{
-				"buffer_size": 1680,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/controllers/my-proxy.js",
-			"settings":
-			{
-				"buffer_size": 1816,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/register-proxy.html",
-			"settings":
-			{
-				"buffer_size": 1385,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/controllers/register.js",
-			"settings":
-			{
-				"buffer_size": 5602,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/my-info.html",
-			"settings":
-			{
-				"buffer_size": 2946,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/controllers/my-income.js",
-			"settings":
-			{
-				"buffer_size": 2605,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -415,16 +300,25 @@
 	},
 	"file_history":
 	[
-		"/Users/LUOCHANGQING/app/env-mon/app/views/my-service.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/app.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-income.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/my-info.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/register.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/register-proxy.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-proxy.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-customer.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/my-service-nav.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/my-customer.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/my-barcode.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/env-health-nav.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/index.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/pay.js",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/main.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/styles/main.css",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/app.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/my-service.html",
+		"/Users/LUOCHANGQING/app/env-mon/app/views/main.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/about-company.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/main.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/change-password.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/my-service-nav.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/env-health-nav.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/order.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-order.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/order.html",
@@ -433,16 +327,10 @@
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-order-detail.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-order-detail.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-service.js",
-		"/Users/LUOCHANGQING/app/env-mon/app/index.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/navbar.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-report-list.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/my-customer.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/my-info.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/register.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/register.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/register-proxy.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-info.js",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-income.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-employee.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-proxy.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/product-list.html",
@@ -463,7 +351,6 @@
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-income.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/login.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-employee.js",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-proxy.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/indoor-3.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/indoor-5.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/indoor-4.html",
@@ -474,11 +361,9 @@
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/ValidationService.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/product.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/login.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/views/my-barcode.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/pollution-detect.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/pollution-detect-nav.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/envmon.sublime-project",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-customer.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/about-app.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/building-2.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/building-1.html",
@@ -609,394 +494,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "scripts/controllers/pay.js",
-					"settings":
-					{
-						"buffer_size": 4369,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1642,
-								1642
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 572.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 4883,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1016,
-								1016
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 264.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "scripts/app.js",
-					"settings":
-					{
-						"buffer_size": 10725,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6251,
-								6251
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3013.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "styles/main.css",
-					"settings":
-					{
-						"buffer_size": 20440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8726,
-								8726
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7203.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/env-health-nav.html",
-					"settings":
-					{
-						"buffer_size": 3728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1431,
-								1457
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 143.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "views/my-barcode.html",
-					"settings":
-					{
-						"buffer_size": 523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								426,
-								426
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "views/my-customer.html",
-					"settings":
-					{
-						"buffer_size": 2249,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								703,
-								703
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/my-service-nav.html",
-					"settings":
-					{
-						"buffer_size": 3868,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1418,
-								1418
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 446.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "scripts/controllers/my-customer.js",
-					"settings":
-					{
-						"buffer_size": 1680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								674,
-								674
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 124.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "scripts/controllers/my-proxy.js",
-					"settings":
-					{
-						"buffer_size": 1816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								978,
-								978
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "views/register-proxy.html",
-					"settings":
-					{
-						"buffer_size": 1385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "scripts/controllers/register.js",
-					"settings":
-					{
-						"buffer_size": 5602,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4732,
-								4732
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1625.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "views/my-info.html",
-					"settings":
-					{
-						"buffer_size": 2946,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1687,
-								1687
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 544.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "scripts/controllers/my-income.js",
-					"settings":
-					{
-						"buffer_size": 2605,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1039,
-								1039
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 323.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1042,6 +541,10 @@
 		"selected_items":
 		[
 			[
+				"app.js",
+				"scripts/app.js"
+			],
+			[
 				"main.css",
 				"styles/main.css"
 			],
@@ -1080,10 +583,6 @@
 			[
 				"my",
 				"views/my-customer.html"
-			],
-			[
-				"app.js",
-				"scripts/app.js"
 			],
 			[
 				"bar",
