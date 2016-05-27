@@ -300,6 +300,8 @@
 	},
 	"file_history":
 	[
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/app.js",
+		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/pay.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/my-income.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-info.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/register.js",
@@ -311,9 +313,7 @@
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-barcode.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/env-health-nav.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/index.html",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/controllers/pay.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/styles/main.css",
-		"/Users/LUOCHANGQING/app/env-mon/app/scripts/app.js",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/my-service.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/main.html",
 		"/Users/LUOCHANGQING/app/env-mon/app/views/about-company.html",
@@ -545,6 +545,14 @@
 				"scripts/app.js"
 			],
 			[
+				"payjs",
+				"scripts/controllers/pay.js"
+			],
+			[
+				"pay.js",
+				"scripts/controllers/pay.js"
+			],
+			[
 				"main.css",
 				"styles/main.css"
 			],
@@ -591,10 +599,6 @@
 			[
 				"main",
 				"styles/main.css"
-			],
-			[
-				"pay.js",
-				"scripts/controllers/pay.js"
 			],
 			[
 				"index",
@@ -1047,10 +1051,6 @@
 			[
 				"order.ht",
 				"views/order.html"
-			],
-			[
-				"produc",
-				"scripts/controllers/product-details.js"
 			]
 		],
 		"width": 0.0
