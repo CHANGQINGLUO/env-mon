@@ -14,6 +14,10 @@ angular.module('angularAppApp')
   	$scope.customerList=[];
     $scope.customer={};
 
+    if($rootScope.userProfile.role=='internal')
+        $scope.advisorId = $rootScope.selectedAdvisor;
+    else
+        $scope.advisorId = $rootScope.userProfile.id;
 
     $scope.isListScreen = true;   
     if($rootScope.mockMode){
@@ -23,7 +27,7 @@ angular.module('angularAppApp')
             url:$rootScope.hostUrl+'getCustomerListByAdvisor',
             method:'POST',
             data:{
-                'loginId':$rootScope.userProfile.id
+                'loginId':$scope.advisorId
             },
             headers:{
                 'Content-Type': 'application/json'

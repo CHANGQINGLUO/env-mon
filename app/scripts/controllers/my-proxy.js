@@ -41,8 +41,9 @@ angular.module('angularAppApp')
         });
 
         $scope.selectProxy = function(loginId,name, email, phone, address, company, creationDate){
-            $scope.proxy = {"name":name, "email":email, "phone":phone, "address":address, "company":company, "creationDate":creationDate};
+            $scope.proxy = {"loginId":loginId, "name":name, "email":email, "phone":phone, "address":address, "company":company, "creationDate":creationDate};
             $scope.isListScreen = false;
+            $rootScope.selectedAdvisor = loginId;
         };
         $scope.back = function(){
             $scope.isListScreen = true;

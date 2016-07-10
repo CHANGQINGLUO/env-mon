@@ -275,6 +275,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "scripts/app.js",
+			"settings":
+			{
+				"buffer_size": 10725,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/about-company.html",
+			"settings":
+			{
+				"buffer_size": 1278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles/main.css",
+			"settings":
+			{
+				"buffer_size": 20478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/main.html",
+			"settings":
+			{
+				"buffer_size": 2189,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/product-list.html",
+			"settings":
+			{
+				"buffer_size": 1984,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -494,8 +534,147 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 10725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6787,
+								6787
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3916.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/about-company.html",
+					"settings":
+					{
+						"buffer_size": 1278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								973,
+								973
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 479.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "styles/main.css",
+					"settings":
+					{
+						"buffer_size": 20478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1313,
+								1313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 1.0,
+						"translation.y": 1178.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/main.html",
+					"settings":
+					{
+						"buffer_size": 2189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								383,
+								383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/product-list.html",
+					"settings":
+					{
+						"buffer_size": 1984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								642,
+								642
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 142.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -541,6 +720,26 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"views/main.html"
+			],
+			[
+				"produ",
+				"views/product-list.html"
+			],
+			[
+				"main.",
+				"views/main.html"
+			],
+			[
+				"main.css",
+				"styles/main.css"
+			],
+			[
+				"about",
+				"views/about-company.html"
+			],
+			[
 				"app.js",
 				"scripts/app.js"
 			],
@@ -551,10 +750,6 @@
 			[
 				"pay.js",
 				"scripts/controllers/pay.js"
-			],
-			[
-				"main.css",
-				"styles/main.css"
 			],
 			[
 				"my-income.js",
@@ -597,10 +792,6 @@
 				"views/my-barcode.html"
 			],
 			[
-				"main",
-				"styles/main.css"
-			],
-			[
 				"index",
 				"index.html"
 			],
@@ -611,10 +802,6 @@
 			[
 				"main.ht",
 				"views/main.html"
-			],
-			[
-				"about",
-				"views/about-company.html"
 			],
 			[
 				"order-de",
@@ -745,10 +932,6 @@
 				"views/pay.html"
 			],
 			[
-				"main.",
-				"scripts/controllers/main.js"
-			],
-			[
 				"wechat",
 				"scripts/wechat.js"
 			],
@@ -783,10 +966,6 @@
 			[
 				"ap",
 				"scripts/app.js"
-			],
-			[
-				"produ",
-				"scripts/controllers/product-list.js"
 			],
 			[
 				"m",

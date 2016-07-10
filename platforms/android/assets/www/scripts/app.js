@@ -209,9 +209,9 @@ angular
   .run(function($rootScope,$location,$http){
 
       /** host url*/
-      //$rootScope.hostUrl = "http://192.168.0.109:8080/mb-bg-ext-web/rest/";
+      //$rootScope.hostUrl = "http://192.168.0.103:8080/mb-bg-ext-web/rest/";
       $rootScope.hostUrl = "http://120.76.96.199:8080/mb-bg-ext-web/rest/";
-      //$rootScope.downloadUrl = "http://192.168.0.109:8080/mb-bg-ext-web/download/";
+      //$rootScope.downloadUrl = "http://192.168.0.103:8080/mb-bg-ext-web/download/";
       $rootScope.downloadUrl = "http://120.76.96.199:8080/mb-bg-ext-web/download/";
       /** true for non host, false for  host */
       $rootScope.mockMode = false ;
